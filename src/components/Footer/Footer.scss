@@ -1,0 +1,298 @@
+.footer {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  position: relative;
+  padding: 40px 20px;
+}
+
+// верхняя часть (оставляем твою стилизацию)
+.footer-top {
+  width: 100%;
+  border-radius: 48px;
+  background-color: rgba(74, 105, 226, 1);
+  margin: 0 auto;
+  position: relative;
+  padding: 64px 32px;
+  text-align: left;
+
+  .footer-inside {
+    max-width: 510px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .footer-inp-btn {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .footer-input {
+      flex: 1;
+      background-color: rgba(74, 105, 226, 1);
+      height: 48px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, 1);
+      border-radius: 8px;
+      outline: none;
+      color: white;
+    }
+
+    .footer-btn {
+      margin-left: 10px;
+      width: 102px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(35, 35, 33, 1);
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: rgba(242, 131, 51, 1);
+      }
+    }
+  }
+
+  .footer-discount {
+    color: white;
+    font-family: Rubik;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .footer-p {
+    color: rgba(231, 231, 227, 1);
+    font-size: 18px;
+    font-family: Open Sans;
+  }
+  .footer-imagese{
+    width: 100%;
+    max-width: 370px;
+   position: absolute;
+   height: 90px;
+   display: flex;
+   justify-content: center;
+   align-items: start;
+   top: 144px;
+   right: 50px;
+  }
+
+  .footer-img {
+    // position: absolute;
+    // top: 144px;
+    // right: 200px;
+    max-width: 360px;
+  }
+
+  .footer-plus {
+    // position: absolute;
+    // top: 120px;
+    // right: 40px;
+    max-width: 40px;
+  }
+}
+
+// нижняя часть (главное исправление)
+.footer-bottom {
+  border-radius: 48px;
+  width: 100%;
+  background-color: rgba(35, 35, 33, 1);
+  margin-top: 40px;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+  position: relative;
+
+  .about-us,
+  .categories,
+  .company,
+  .follow-us {
+    flex: 1 1 220px; // каждая колонка будет адаптироваться
+    min-width: 200px;
+    overflow: hidden;
+  }
+
+  .footer-h2,
+  .footer-h3,
+  .footer-h3-2,
+  .footer-h3-3 {
+    color: rgba(255, 165, 47, 1);
+    font-family: Rubik;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .footer-p2,
+  .li,
+  .li-2 {
+    color: rgba(231, 231, 227, 1);
+    font-family: Open Sans;
+    font-size: 18px;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: rgb(242, 131, 51);
+    }
+  }
+
+  .footer-imgs {
+    display: flex;
+    gap: 16px;
+
+    .f-img {
+      cursor: pointer;
+      transition: 0.3s;
+      width: 24px;
+      height: 24px;
+
+      &:hover {
+        background-color: rgb(242, 131, 51);
+        border-radius: 50%;
+        padding: 4px;
+      }
+    }
+  }
+
+  .big-kicks {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto 0;
+    display: block;
+  }
+}
+
+// нижний текст
+.footer-final {
+  font-family: Open Sans;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: underline;
+  margin: 20px auto 0;
+  display: block;
+  color: black;
+}
+
+// адаптив
+// адаптив для планшета
+@media (max-width: 1024px) {
+  .footer-top {
+    text-align: center;
+
+    .footer-inside {
+      margin: 0 auto;
+      align-items: center;
+    }
+
+    .footer-imagese{
+      position: static;
+      width: 75%;
+      height: 85%;
+      padding: 15px;
+      margin: 0 auto;
+    }
+
+
+    .footer-img,
+    .footer-plus {
+         width: 85%;
+    }
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 24px;
+  }
+
+  .big-kicks {
+    max-width: 80%;
+  }
+
+  .footer-final {
+    font-size: 12px;
+  }
+  .li{
+    overflow: hidden;
+    .li-2{
+        overflow: hidden;
+    }
+  }
+}
+
+// адаптив для телефонов
+@media (max-width: 768px) {
+  .footer-top {
+    padding: 40px 20px;
+
+    .footer-inside {
+      gap: 16px;
+
+      .footer-discount {
+        font-size: 24px;
+      }
+
+      .footer-p {
+        font-size: 14px;
+      }
+
+      .footer-inp-btn {
+        flex-direction: column;
+        gap: 10px;
+
+        .footer-btn {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+
+  .footer-bottom {
+    padding: 20px;
+
+    .about-us,
+    .categories,
+    .company,
+    .follow-us {
+      flex: unset;
+      min-width: unset;
+      width: 100%;
+    }
+      .footer-imagese{
+    width: 55%;
+    height: 70%;
+    margin: 0 auto;
+  }
+      .footer-img,
+     .footer-plus {
+        width: 60%;
+     }
+  }
+
+  .footer-final {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  .li{
+    overflow: hidden;
+  }
+.company-ul{
+    overflow: hidden;
+}
+
+}

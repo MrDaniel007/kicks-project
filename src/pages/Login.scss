@@ -1,0 +1,86 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.auth-box {
+  display: flex;
+  max-width: 1295px;
+  width: 100%;
+  gap: 40px;
+}
+
+.auth-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-info {
+  flex: 1;
+  padding: 20px;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-btn {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: #0a2d5e;
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background: black;
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* --- адаптивка --- */
+@media (max-width: 992px) {
+  .auth-box {
+    flex-direction: column; /* форма сверху, текст снизу */
+    align-items: center;
+  }
+
+  .auth-info {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .auth-info2 {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth-info2 h2 {
+    font-size: 24px;
+  }
+
+  .auth-p {
+    font-size: 14px;
+  }
+
+  .auth-box {
+    padding: 0 10px;
+  }
+}

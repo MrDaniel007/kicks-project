@@ -1,0 +1,99 @@
+/* простой стиль — можешь подкрутить под свой дизайн */
+.profit-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.profit-card {
+  width: 100%;
+  max-width: 760px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+/* выбор Login/Register */
+.choose-row {
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  margin-bottom:20px;
+}
+.choose-btn {
+  padding:12px 20px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  background:#f6f6f6;
+  cursor:pointer;
+}
+
+/* формы */
+.form-col {
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.form-col input, .form-col select {
+  padding:12px 14px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  outline:none;
+}
+.row {
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.btn {
+  padding:10px 16px;
+  border-radius:8px;
+  background:#2268b8;
+  color:#fff;
+  border:none;
+  cursor:pointer;
+}
+.btn.danger {
+  background:#d9534f;
+}
+.link {
+  background:transparent;
+  border: none;
+  color:#2268b8;
+  cursor:pointer;
+}
+
+/* профиль */
+.profile-top {
+  display:flex;
+  gap:16px;
+  align-items:center;
+}
+.avatar-large {
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  background:#4a90e2;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:20px;
+}
+.profile-info h3 { margin:0; }
+.small { color:#666; font-size:14px; margin:6px 0; }
+
+.profile-actions {
+  margin-top:18px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* адаптив */
+@media (max-width: 600px) {
+  .profit-card { padding:18px; }
+  .avatar-large { width:60px; height:60px; font-size:18px; }
+}

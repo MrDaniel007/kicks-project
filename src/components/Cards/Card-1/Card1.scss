@@ -1,0 +1,58 @@
+.home-new {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 0 16px; // небольшой отступ, чтобы на телефоне не липло к краям
+}
+
+.home-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap; // чтобы текст и кнопка могли переноситься
+  gap: 16px;
+}
+
+.home-drops {
+  font-size: 70px;
+  font-weight: 600;
+  text-transform: uppercase;
+  flex: 1; // займёт всё доступное пространство
+}
+
+.home-btn {
+  min-width: 160px;
+  height: 48px;
+}
+
+/* --- адаптивка --- */
+@media (max-width: 1024px) {
+  .home-drops {
+    font-size: 48px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .home-title {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-drops {
+    font-size: 32px;
+  }
+
+  .home-btn {
+    width: 100%;
+  }
+
+  .home-title {
+    flex-direction: column;
+    align-items: center;
+  }
+}

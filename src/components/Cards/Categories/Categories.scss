@@ -1,0 +1,111 @@
+.categories1 {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 32px;
+  background: #000;
+  border-radius: 16px;
+  color: #fff;
+
+  .categories-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .arrows {
+      display: flex;
+      gap: 12px;
+
+      .arrow-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid #444;
+        background: #111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        svg {
+          stroke: #fff;
+        }
+
+        &:hover {
+          background: #333;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    .category-card {
+      text-align: center;
+
+      .img-wrapper {
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: auto;
+          transition: transform 0.4s ease;
+        }
+
+        &:hover img {
+          transform: scale(1.05);
+        }
+      }
+
+      .category-title {
+        margin-top: 12px;
+        font-size: 18px;
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -4px;
+          width: 0;
+          height: 2px;
+          background: #fff;
+          transition: width 0.4s ease;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* 📱 адаптив */
+@media (max-width: 1024px) {
+  .categories .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 599px) {
+  .categories {
+    padding: 16px;
+  }
+}

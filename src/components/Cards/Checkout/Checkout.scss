@@ -1,0 +1,140 @@
+.checkout {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 40px;
+
+  .checkout-left {
+    flex: 2;
+
+    h2 {
+      font-size: 20px;
+      margin: 20px 0 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+
+      &:focus {
+        border-color: #000;
+        outline: none;
+      }
+    }
+
+    .name-row {
+      display: flex;
+      gap: 15px;
+
+      div {
+        flex: 1;
+      }
+    }
+
+    .delivery-option {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      cursor: pointer;
+
+      &.active {
+        border: 2px solid #000;
+        background: #f9f9f9;
+      }
+    }
+
+    .checkboxes {
+      margin: 15px 0;
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+    }
+
+    .checkout-btn {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+
+      &:hover {
+        background: #222;
+      }
+    }
+
+    .error {
+      color: red;
+      font-size: 12px;
+      margin-bottom: 10px;
+      display: block;
+    }
+  }
+
+  .checkout-right {
+    flex: 1;
+    border-left: 1px solid #ddd;
+    padding-left: 20px;
+
+    h2 {
+      font-size: 20px;
+      margin: 20px 0 10px;
+    }
+
+    .summary {
+      margin-bottom: 20px;
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+
+        &.total {
+          font-weight: bold;
+          font-size: 16px;
+          border-top: 1px solid #ccc;
+          padding-top: 10px;
+        }
+      }
+    }
+
+    .order-item {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+
+      img {
+        width: 90px;
+        height: 90px;
+        border-radius: 6px;
+        object-fit: cover;
+      }
+
+      h4 {
+        margin: 0;
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 12px;
+        margin: 2px 0;
+      }
+
+      .price {
+        font-weight: bold;
+      }
+    }
+  }
+}

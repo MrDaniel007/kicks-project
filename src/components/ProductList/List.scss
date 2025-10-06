@@ -1,0 +1,59 @@
+// .List-card{
+//     display: flex;
+//     justify-content: space-between;
+// align-items: center;
+// gap: 16px;
+// }
+
+// .List-card {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr); // 4 карточки в ряд
+//   gap: 20px;
+//   margin-top: 20px;
+
+//   @media (max-width: 1024px) {
+//     grid-template-columns: repeat(2, 1fr); // планшет
+//   }
+
+//   @media (max-width: 600px) {
+//     grid-template-columns: 1fr; // телефон
+//   }
+// }
+// .List-card {
+//   width: 100%;
+//   .swiper {
+//     width: 100%;
+//     padding-bottom: 20px;
+//   }
+
+//   .swiper-slide {
+//     display: flex;
+//     justify-content: center;
+//   }
+// }
+.List-card {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+
+  .swiper {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}

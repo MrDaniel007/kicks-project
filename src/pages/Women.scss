@@ -1,0 +1,213 @@
+/* src/pages/Women.scss */
+
+/* Акценты */
+:root {
+  --accent: #d63384;     /* розово-фиолетовый основной */
+  --brand-nike: #ff5a1f;
+  --brand-adidas: #111;
+  --brand-hoka: #00b4d8;
+  --card-border: rgba(0,0,0,0.06);
+}
+
+/* Основной контейнер — прозрачный, не трогает фон сайта */
+.women {
+  padding: 28px 18px;
+  background: transparent;
+  color: inherit;
+
+  .wc-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 22px;
+    color: var(--accent);
+  }
+}
+
+/* Блок бренда */
+.brand-block {
+  margin-bottom: 32px;
+
+  .brand-title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 6px 6px 14px 6px;
+    color: #222;
+    padding: 6px 10px;
+    border-radius: 10px;
+  }
+
+  /* подсветка бренд-стиля, меняй по названиям брендов */
+  &[data-brand="Nike"] .brand-title { color: var(--brand-nike); border: 1px solid rgba(255,90,31,0.12); }
+  &[data-brand="Adidas"] .brand-title { color: var(--brand-adidas); border: 1px solid rgba(0,0,0,0.08); }
+  &[data-brand="HOKA"] .brand-title { color: var(--brand-hoka); border: 1px solid rgba(0,180,216,0.12); }
+}
+
+/* Карточка — фиксированная высота, белый фон */
+.card {
+  height: 380px;                 /* одинаковая высота для всех карточек */
+  display: flex;
+  flex-direction: column;
+  background: #fff;              /* белая карточка */
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+  transition: transform .45s cubic-bezier(.2,.9,.25,1), box-shadow .45s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  }
+
+.img-container {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+  background: transparent;
+  display: block;
+  border-radius: 14px; /* добавлено */
+
+  .img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity .5s ease, transform .5s ease;
+    border-radius: 14px; /* добавлено */
+  }
+
+  .hover { opacity: 0; z-index: 0; }
+
+  &:hover .main { opacity: 0; transform: scale(1.03); }
+  &:hover .hover { opacity: 1; transform: scale(1.03); }
+
+  /* Иконки поверх фото */
+  .actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity .28s ease, transform .28s ease;
+    pointer-events: auto; /* добавлено, чтобы кнопки были кликабельны */
+  }
+
+  &:hover .actions {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.85);
+    color: #111;
+    font-size: 20px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+    transition: transform .2s ease, background .2s ease, color .2s ease;
+
+    &:hover { transform: translateY(-3px); }
+
+    &.active {
+      color: var(--accent);
+    }
+  }
+}
+
+    /* Heart active style */
+    .icon-heart.active {
+      background: #e53935;
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(229,57,53,0.16);
+    }
+
+    /* Cart active style */
+    .icon-cart.active {
+      background: #6f42c1;
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(111,66,193,0.14);
+    }
+  }
+
+  .info {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    height: calc(100% - 230px); /* оставшееся место */
+    box-sizing: border-box;
+
+    .item-title {
+      font-size: 16px;           /* чуть больше, но не лезет */
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.15;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-height: 42px;         /* резерв места, чтобы не наползало на картинку */
+    }
+    .item-price {
+      font-size: 15px;
+      font-weight: 700;
+      color: #198754;           /* зелёный акцент */
+      margin: 2px 0 0 0;        /* сразу под названием */
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 6px;
+
+      .item-brand {
+        font-size: 13px;
+        color: #666;
+      }
+
+      .item-cat {
+        font-size: 13px;
+        color: var(--accent);
+        font-weight: 600;
+      }
+    }
+  }
+
+
+/* Responsive tweaks (не ломаем адаптив) */
+@media (max-width: 1024px) {
+  .card { height: 360px; .img-container { height: 220px; } }
+}
+@media (max-width: 600px) {
+  .wc-title { font-size: 22px; }
+  .card { height: 380px; .img-container { height: 230px; } }
+}
+/* --- Добавлено: swatches и небольшие правки для плавности --- */
+
+.card {
+  background: #fafafa;   /* не белый, а чуть серый фон для контраста */
+  border-radius: 14px;
+  border: 1px solid var(--card-border);
+  transition: transform .4s ease, box-shadow .4s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+    background: #fff; /* подсветка при наведении */
+  }
+
+/* Women.scss (исправленное) */
+
+}

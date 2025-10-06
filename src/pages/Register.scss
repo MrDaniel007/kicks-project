@@ -1,0 +1,109 @@
+.women {
+  padding: 30px;
+
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #d63384; // розовый акцент
+  }
+
+  .brand-title {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #6f42c1; // фиолетовый для брендов
+    text-align: left;
+  }
+
+  .card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 360px; // фиксированная высота
+    background: transparent;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .img-container {
+      position: relative;
+      flex: 1;
+
+      img {
+        width: 100%;
+        height: 220px;
+        object-fit: contain;
+        transition: opacity 0.3s ease;
+      }
+
+      .hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+
+      &:hover .main {
+        opacity: 0;
+      }
+      &:hover .hover {
+        opacity: 1;
+      }
+
+      .actions {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        gap: 10px;
+        opacity: 0;
+        transition: 0.3s ease;
+      }
+
+      &:hover .actions {
+        opacity: 1;
+      }
+
+      .heart, .cart {
+        font-size: 1.4rem;
+        cursor: pointer;
+        border: 2px solid #000;
+        border-radius: 4px;
+        padding: 5px;
+        background: transparent;
+        transition: 0.3s ease;
+      }
+
+      .heart.active {
+        color: red;
+        border-color: red;
+      }
+
+      .cart:hover {
+        color: #6f42c1;
+        border-color: #6f42c1;
+      }
+    }
+
+    .info {
+      padding: 10px;
+      text-align: center;
+
+      .title {
+        font-weight: 600;
+      }
+
+      .price {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #198754;
+        margin-top: 5px;
+      }
+    }
+  }
+}
