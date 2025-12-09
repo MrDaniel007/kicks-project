@@ -351,12 +351,12 @@ export default function Listing() {
         </button>
 
         <div className={`filters ${showMobileFilters ? "show" : ""}`}>
-          <div className="filter-header">
+          {/* <div className="filter-header">
             <h3>Refine By</h3>
             <button className="clear-all" onClick={clearAllFilters}>
               Clear All
             </button>
-          </div>
+          </div> */}
 
           {/* Gender Filter */}
           <div className="filter-group">

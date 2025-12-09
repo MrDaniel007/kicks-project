@@ -14,7 +14,6 @@ function Home() {
   return (
     <div style={{overflow:"hidden"}}>
       <Banner />
-
       <Card1 />
       <Categories/>
       <Reviews/>

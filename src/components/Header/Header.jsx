@@ -87,7 +87,7 @@ const handleClose = () => {
             ☰
           </div>
           <nav className="nav-home">
-            <Link className='New-rubik link-underline' to="/">New Drops <span className='rubik'></span></Link>
+            <Link className='New-rubik link-underline' to="/">New Drops 1 <span className='rubik'></span></Link>
           <Link className='link-header link-underline' to="/men">Men</Link>
             <Link className='link-header2 link-underline' to="/women">Women</Link>
           </nav>
